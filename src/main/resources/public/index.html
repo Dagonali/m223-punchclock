@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport"
@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
         <script src="script.js" type="application/javascript"></script>
     </head>
-    <body>
+
         <form id="createEntryForm">
             <label for="checkIn">Check in</label>
             <input type="date" name="checkInDate" id="checkIn" required>
@@ -17,6 +17,10 @@
             <label for="checkOut">Check out</label>
             <input type="date" name="checkOutDate" id="checkOut" required>
             <input type="time" name="checkOutTime" required>
+            <label for="category">Category</label>
+            <input type="text" name="category" id="category" required>
+            <label for="room">Room</label>
+            <input type="text" name="room" id="room" required>
             <input type="submit" value="Save" />
         </form>
         <table>
@@ -25,13 +29,19 @@
                     <th>ID</th>
                     <th>Check in</th>
                     <th>Check out</th>
+                    <th>Check out</th>
+                    <th>Category</th>
+                    <th>Room</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
-            <tbody id="entryDisplay">
+                <tbody id="entryDisplay">
                 <tr>
                     <td colspan="3">Loading...</td>
                 </tr>
-            </tbody>
+                </tbody>
+
         </table>
+
     </body>
 </html>
